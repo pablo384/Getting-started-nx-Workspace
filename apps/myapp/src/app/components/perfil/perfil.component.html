@@ -1,7 +1,8 @@
-<div>
+<div class="container">
 
-  <p>
-    perfil works!
-  </p>
-  <a routerLink="/card" class="btn btn-primary">Perfil</a>
+<button class="btn btn-primary"  (click)="increment()">Increment</button> <p>{{count$|async}}</p>
+  <br>
+<button class="btn btn-success" (click)="decrement()">Decrement</button>
+  <br>
+<button class="btn btn-warning" (click)="reset()">reset</button>
 </div>
