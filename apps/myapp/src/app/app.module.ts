@@ -11,6 +11,7 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {environment} from "../environments/environment";
 import { HomeCardComponent } from './components/home-card/home-card.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {PushNotificationModule} from "ng-push-notification";
 
 const ROUTES = [
   {
@@ -34,6 +35,7 @@ const ROUTES = [
       logOnly: environment.production // Restrict extension to log-only mode
     }),
     RouterModule.forRoot(ROUTES, { initialNavigation: 'enabled' }),
+    PushNotificationModule.forRoot(),
     ReactiveFormsModule
   ],
   declarations: [AppComponent, PerfilComponent, CardComponent, HomeCardComponent],
